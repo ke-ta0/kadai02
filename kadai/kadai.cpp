@@ -71,6 +71,10 @@ int main()
 			std::cout << "Playerに" << SAttack << "ダメージ" << std::endl;
 			std::cout << "" << std::endl;
 		}
+		else if(Slime.HP <= 0)
+		{
+			std::cout<< ""<<std::endl;
+		}
 
 		if (Gobrin.HP >= 0)
 		{
@@ -83,11 +87,14 @@ int main()
 		}
 		std::cout << "" << std::endl;
 
+		//int MaxDamage;
+		//if(MaxDamage)
 		//
 		p.turnEnd(p.name, p.HP);
 		Slime.turnEnd(Slime.name,Slime.HP);
 		Gobrin.turnEnd(Gobrin.name, Gobrin.HP);
 
 		std::cout << "" << std::endl;
+
 	}
 }
