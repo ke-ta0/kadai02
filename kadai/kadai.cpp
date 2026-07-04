@@ -41,16 +41,19 @@ int main()
 			}
 			break;
 		}
+
 		// player処理
 		std::cout << "Playerのターン" << std::endl;
 		p.isPlayer = true;
 		int Attack = p.Attacking();
+
 		// スライムのHPが0なら
 		Slime.HP -= Attack; if (Slime.HP <= 0)
 		{
 			Gobrin.HP -= Attack;
 			std::cout << "ゴブリンに" << Attack << "ダメージ" << std::endl;
 		}
+
 		else {
 			std::cout << "スライムに" << Attack << "ダメージ" << std::endl;
 		}
@@ -80,7 +83,7 @@ int main()
 		}
 		std::cout << "" << std::endl;
 
-		// 
+		//
 		p.turnEnd(p.name, p.HP);
 		Slime.turnEnd(Slime.name,Slime.HP);
 		Gobrin.turnEnd(Gobrin.name, Gobrin.HP);
